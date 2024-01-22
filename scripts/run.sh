@@ -2,14 +2,13 @@
 #
 # Run tweego directly or with flatpak
 
-NAME="$1"
-STORY="$2"
-TARGET="$3"
+STORY="$1"
+TARGET="$2"
 
 if command -v tweego; then
   COMMAND="tweego"
 else
-  COMMAND="flatpak run --filesystem=$PWD/$STORY:ro --filesystem=$PWD/$TARGET:rw $NAME"
+  COMMAND="flatpak run --filesystem=$PWD/$STORY:ro --filesystem=$PWD/$TARGET:rw com.github.tmedwards.tweego"
 fi
 
 $COMMAND -o "$TARGET" "$STORY"

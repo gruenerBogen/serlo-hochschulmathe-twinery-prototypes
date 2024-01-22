@@ -1,6 +1,5 @@
 .PHONY: build help install run
 
-NAME=com.github.tmedwards.tweego
 MANIFEST=$(NAME).yml
 BUILD_DIR=build-dir
 PWD=$(shell pwd)
@@ -30,4 +29,4 @@ public:
 	mkdir -p public
 
 run: story.twee public
-	scripts/run.sh $(NAME) $< public/index.html
+	scripts/run.sh $< public/index.html
