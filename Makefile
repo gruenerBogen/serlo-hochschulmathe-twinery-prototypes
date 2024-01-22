@@ -1,6 +1,6 @@
 .PHONY: help install run
 
-MANIFEST=$(NAME).yml
+MANIFEST=com.github.tmedwards.tweego.yml
 BUILD_DIR=build-dir
 PWD=$(shell pwd)
 
