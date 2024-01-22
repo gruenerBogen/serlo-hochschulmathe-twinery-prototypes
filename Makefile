@@ -1,4 +1,4 @@
-.PHONY: help install run
+.PHONY: help install build
 
 MANIFEST=com.github.tmedwards.tweego.yml
 BUILD_DIR=build-dir
@@ -14,15 +14,12 @@ help:
 	@echo ""
 	@echo "Commands:"
 	@echo ""
+	@echo "build   – Build all stories"
 	@echo "clean   – Clean build cache"
 	@echo "install – Install tweego"
-	@echo "run     – Run tweego with story.twee"
 
 install:
 	flatpak-builder --user --install --force-clean $(BUILD_DIR) $(MANIFEST)
 
-public:
-	mkdir -p public
-
-run: story.twee public
-	scripts/run_tweego.sh -o public/index.html $<
+build:
+	scripts/build_stories.sh
