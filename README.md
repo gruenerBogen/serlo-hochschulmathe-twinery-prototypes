@@ -1,3 +1,3 @@
-# 2023-12-10-twine-to-github-pages-example
+# 2023-12-31-twine-multiple-stories-to-github-pages
 
-Example repository for deploying interactive stories created with Twine to GitHub Pages.
+Example repository for deploying multiple interactive stories created with Twine to GitHub Pages.
