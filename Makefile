@@ -29,4 +29,4 @@ public:
 	mkdir -p public
 
 run: story.twee public
-	scripts/run.sh $< public/index.html
+	scripts/run_tweego.sh -o public/index.html $<
