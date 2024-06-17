@@ -1,0 +1,130 @@
+:: StoryTitle
+Untervektorraumkriterium
+
+
+:: StoryData
+{
+  "ifid": "C79EB68E-4ED8-4A4F-9925-55089318A247",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "start": "Untervektorraumkriterium",
+  "zoom": 1
+}
+
+
+:: 1p1 {"position":"700,0","size":"100,100"}
+Wir müssen zwei Richtungen beweisen.
+
+
+:: 1p2 {"position":"800,0","size":"100,100"}
+Der Satz enthält ein ''"genau dann ... wenn"'', was bedeutet, dass wir zwei Implikationen zeigen müssen. Die eine Richtung lautet: Jeder Untervektorraum erfüllt die Bedingungen 1, 2 und 3. Die andere Richtung kann wie folgt formuliert werden: Eine beliebige Teilmenge des Vektorraumes, welche die Bedingungen 1, 2 und 3 erfüllt, ist bereits ein Untervektorraum. 
+
+
+:: 2p1 {"position":"700,100","size":"100,100"}
+Sei `$U$` ein beliebiger Untervektorraum von `$V$`. Dass `$U$` die Bedingungen 1, 2 und 3 erfüllt ist eine direkte Folge der Tatsache, dass `$U$` als Untervektorraum insbesondere ein Vektorraum ist.
+
+
+:: 2p2 {"position":"800,100","size":"100,100"}
+Sei `$U$` ein beliebiger Untervektorraum von `$V$`. Dann ist per Definition `$U$` auch ein Vektorraum und es gelten alle Axiome eines Vektorraums. Dies impliziert unmittelbar die Eigenschaften 1 und 2. Die Eigenschaft 3 folgt aus der Tatsache, dass `$U$` eine abelsche Gruppe ist.
+
+
+:: 2p3 {"position":"900,100","size":"100,100"}
+Sei `$U$` ein beliebiger Untervektorraum von `$V$`. Dann ist per Definition `$U$` auch ein Vektorraum. Damit gelten für `$U$` alle Axiome aus der Definition eines Vektorraums.
+
+Das heißt insbesondere auch, dass die auf `$U$` eingeschränkten Verknüpfungsabbildungen `$+: U \times U \to U$` und `$\cdot : K \times U \to U$` wohldefiniert sind. Dies ist aber nur eine andere Formulierung der Bedingungen 2) und 3).  
+
+Da U außerdem zusammen mit `$+$` eine abelsche Gruppe bildet, enthält `$U$` das neutrale Element `$0_V$`. Das heißt, es gilt auch Bedingung 1.
+
+
+:: 3p1 {"position":"700,200","size":"100,100"}
+Sei `$U \subseteq V$` eine Teilmenge von `$V$`, in der die drei Bedingungen gelten. Wir müssen zeigen, dass `$U$` ein Vektorraum ist. Dies folgt unmittelbar aus Einsetzen der Definition.
+
+
+:: 3p2 {"position":"800,200","size":"100,100"}
+Sei `$U \subseteq V$` eine Teilmenge von `$V$`, in der die drei Bedingungen gelten. Wir müssen zeigen, dass `$U$` ein Vektorraum ist. Dazu zeigen wir, dass `$U$` ''alle'' Eigenschaften aus der Definition eines Vektorraums erfüllt.
+
+Die Bedinugnen 1 bis 3 implizieren, dass die von `$V$` auf `$U$` eingeschränkten Verknüpfungen wohldefiniert sind. Die Vektorraumaxiome folgen nun aus den Vektorraumaxiomen, die `$V$` erfüllt. 
+
+
+:: 3p3 {"position":"900,200","size":"100,100"}
+Sei `$U \subseteq V$` eine Teilmenge von `$V$`, in der die drei Bedingungen gelten. Wir müssen zeigen, dass `$U$` ein Vektorraum ist. Dazu zeigen wir, dass `$U$` ''alle'' Eigenschaften aus der Definition eines Vektorraums erfüllt.
+
+Aus der Bedingung 1 folgt, dass `$U$` eine nicht-leere Menge ist. Aus den Bedingungen 2 und 3 können wir ableiten, dass die von `$V$` auf `$U$` eingeschränkten Verknüpfungen `$+: U \times U \to U $` und `$\cdot : K \times U \to U$` wohldefiniert sind. Wir haben also eine nicht-leere Menge `$U$` mit einer inneren Verknüpfung `$+$` (Vektoraddition) und einer äußeren Verknüpfung `$\cdot$` (Skalarmultiplikation). 
+
+Nun ist noch nachzuweisen, dass `$U$` zusammen mit `$+$` eine abelsche Gruppe bildet und die Axiome der skalaren Multiplikation gelten. Dies können wir tun, indem wir die Bedingungen für `$U$` auf die Bedingungen für `$V$` zurückführen, wo sie gelten.
+
+
+:: 3p4 {"position":"1000,200","size":"100,100"}
+Sei `$U \subseteq V$` eine Teilmenge von `$V$`, in der die drei Bedingungen gelten. Wir müssen zeigen, dass `$U$` ein Vektorraum ist. Dazu zeigen wir, dass `$U$` ''alle'' Eigenschaften aus der Definition eines Vektorraums erfüllt.
+
+Aus der Bedingung 1 folgt, dass `$U$` eine nicht-leere Menge ist. Aus den Bedingungen 2 und 3 können wir ableiten, dass die von `$V$` auf `$U$` eingeschränkten Verknüpfungen `$+: U \times U \to U $` und `$\cdot : K \times U \to U$` wohldefiniert sind. Wir haben also eine nicht-leere Menge `$U$` mit einer inneren Verknüpfung `$+$` (Vektoraddition) und einer äußeren Verknüpfung `$\cdot$` (Skalarmultiplikation). 
+
+Nun ist noch nachzuweisen, dass `$U$` zusammen mit `$+$` eine abelsche Gruppe bildet und die Axiome der skalaren Multiplikation gelten. Jetzt können wir verwenden, dass `$V$` ein Vektorraum ist. Daraus folgt wegen `$U\subseteq V$` bereits:
+
+* ''Assoziativgesetz:'' Für alle `$v,w,z\in U$` gilt: `$v + (w + z) = (v + w) + z$`
+* ''Kommutativgesetz:'' Für alle `$v,w\in U$` gilt: `$v + w = w + v$` 
+* ''Skalares Distributivgesetz:'' Für alle `$\lambda, \mu \in K$` und alle `$v \in U $` gilt: `$(\lambda + \mu) \cdot v = (\lambda \cdot v) + (\mu \cdot v)$`
+* ''Vektorielles Distributivgesetz:'' Für alle `$\lambda \in K$` und alle `$v,w \in U$` gilt: `$\lambda \cdot (v + w) = (\lambda \cdot v) + (\lambda \cdot w)$`     
+* ''Assoziativgesetz für Skalare:'' Für alle `$\lambda, \mu \in K$` und alle `$v \in U $` gilt: `$(\lambda \cdot \mu) \cdot v = \lambda \cdot (\mu \cdot v)$`
+* ''Neutrales Element der skalaren Multiplikation:'' Für alle `$v \in U$` und für `$1 \in K$` (das neutrale Element der Multiplikation in `$K$`) gilt: `$1 \cdot v = v$`. 1 heißt ''neutrales Element der skalaren Multiplikation''.
+
+Es bleiben noch die Axiome ''Existenz eines neutralen Elements'' und ''Existenz eines inversen Elements'' übrig. Ersteres ist durch Bedingung 1 gegeben. Es genügt also zu zeigen, dass zu jedem `$u \in U$` ein `$\tilde u \in U$` existiert, so dass `$u + \tilde u = 0_V$`. Für ein beliebiges `$u \in U$` gilt aber wegen Bedingung 3:
+
+`$$-u=(-1) \cdot u \in U$$` 
+
+Also ist `$\tilde u := (-1)\cdot u$` das in `$U$` enthaltene inverse Element von `$u$`.
+
+
+:: Untervektorraumkriterium {"position":"500,250","size":"100,100"}
+## Satz (Untervektorraumkriterium)
+Eine Teilmenge `$U$` eines `$K$`-Vektorraums `$V$` mit Vektoraddition `$+:V\times V \to V$` und Skalarmultiplikation `$\cdot : K \times V \to V$` ist genau dann ein Untervektorraum, wenn folgende drei Bedingungen gelten:
+
+1. `$0_V \in U$`.
+2. Für alle `$v, u \in U$` gilt `$v + u \in U$`.
+3. Für alle `$u \in U$` und für alle `$\lambda \in K$` gilt `$\lambda \cdot u \in U$`.
+
+Anders formuliert: Eine Teilmenge eines Vektorraums ist genau dann ein Untervektorraum, wenn sie sowohl das Nullelement enthält, als auch bezüglich der Vektoraddition und der skalaren Multiplikation abgeschlossen ist.
+
+## Beweis
+(set: $detailLevel1 to 1)
+|1>[(display: "1p" + (text: $detailLevel1))]
+(link-rerun:"Detaillierter")[(unless: (passages: where its name is "1p" + (text: $detailLevel1 + 1))'s length is 0)[(set: $detailLevel1 to $detailLevel1 + 1)(rerun:?1)(rerun:?L)]] (link-rerun:"Zusammengefasster")[(unless: (passages: where its name is "1p" + (text: $detailLevel1 - 1))'s length is 0)[(set: $detailLevel1 to $detailLevel1 - 1)(rerun:?1)(rerun:?L)]]
+
+### Beweisschritt: Jeder Untervektorraum erfüllt die Bedingungen 1,2,3
+(set: $detailLevel2 to 1)
+|2>[(display: "2p" + (text: $detailLevel2))]
+(link-rerun:"Detaillierter")[(unless: (passages: where its name is "2p" + (text: $detailLevel2 + 1))'s length is 0)[(set: $detailLevel2 to $detailLevel2 + 1)(rerun:?2)(rerun:?L)]] (link-rerun:"Zusammengefasster")[(unless: (passages: where its name is "2p" + (text: $detailLevel2 - 1))'s length is 0)[(set: $detailLevel2 to $detailLevel2 - 1)(rerun:?2)(rerun:?L)]]
+
+### Beweisschritt: Wenn die Bedingungen 1, 2 und 3 erfüllt sind, so ist die betrachtete Menge ein Untervektorraum.
+(set: $detailLevel3 to 1)
+|3>[(display: "3p" + (text: $detailLevel3))]
+(link-rerun:"Detaillierter")[(unless: (passages: where its name is "3p" + (text: $detailLevel3 + 1))'s length is 0)[(set: $detailLevel3 to $detailLevel3 + 1)(rerun:?3)(rerun:?L)]] (link-rerun:"Zusammengefasster")[(unless: (passages: where its name is "3p" + (text: $detailLevel3 - 1))'s length is 0)[(set: $detailLevel3 to $detailLevel3 - 1)(rerun:?3)(rerun:?L)]]
+
+|L>[<script>renderLatex()</script>]
+
+
+:: StoryScript [script]
+window.renderLatex = function(){}
+
+$(function () {
+  const script1 = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js";
+  const script2 = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  $.getScript(script1, () => {
+    $.getScript(script2, () => {
+      window.renderLatex = function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+          ],
+          throwOnError : false
+        });
+      }
+      renderLatex();
+      $(window).on("sm.passage.shown", renderLatex);
+    });
+  });
+});
+
+:: StoryStylesheet [stylesheet]
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');

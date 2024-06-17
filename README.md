@@ -1,3 +1,7 @@
-# 2023-12-31-twine-multiple-stories-to-github-pages
+# Twinery Prototypes of Serlo Hochschumathematik
 
-Example repository for deploying multiple interactive stories created with Twine to GitHub Pages.
+Collected Twinery Prototypes of Serlo Hochschumathematik
+
+All files in the stories folder are licensed under the Creative Commons
+licence CC-BY-SA 4.0. The stories are based on the [Mahte für Nicht-Freaks
+project on Wikibooks](https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks).

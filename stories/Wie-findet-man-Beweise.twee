@@ -1,0 +1,527 @@
+:: StoryTitle
+Wie findet man Beweise
+
+
+:: StoryData
+{
+  "ifid": "A98D4FEF-CFAE-4AA8-B2D4-A52B3226D5EC",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "start": "Satz",
+  "zoom": 1
+}
+
+
+:: Addition {"position":"500,1375","size":"100,100"}
+# Beweises üben: Untervektorraum
+Nimm dir Stift und Zettel. Wir wollen gemeinsam den folgenden Satz beweisen:
+
+## Satz
+Sei `$f\colon V \to W$` eine lineare Abbildung zwischen den `$K$`-Vektorräumen `$V$` und `$W$`. Dann ist der Kern `$\ker f$` von `$f$` ein Untervektorraum von `$V$`.
+
+## Mathematische Begriffe in dieser Aussage
+- (link:"lineare Abbildung")[(gotoURL:"https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks:_Lineare_Abbildungen,_Homomorphismus")]
+- `$K$`-Vektorraum
+- Kern einer linearen Abbildung
+(zukünftig Als Spoiler bzw. Einbindung externer Inhalte)
+
+## Trennen in Annahme und Behauptung
+(link:"Was ist eigentlich mit Annahme und Behauptung gemeint")[
+Jede mathematische Aussage lässt sich in Annahme und Behauptung trennen. Die Annahme ist alles, was wir gegeben haben. Im Deutschen ist sie meist im Konjunktiv 1 geschrieben. Die Behauptung ist die Schlussfolgerung, die wir aus den Annahmen ziehen. Sie wird häufig mit einem Dann eingeleitet.]
+
+### Annahme
+- `$V$` und `$W$` sind `$K$`-Vektorräume
+- `$f\colon V \to W$` ist eine lineare Abbildung 
+- `$\ker f = \{v \in V \mid f(v) = 0\}$`
+
+### Behauptung
+Die Menge `$\ker f$` ist ein Untervektorraum von `$V$`.
+
+## Untervektorraumkriterium
+Eine Teilmenge `$\ker f$` eines `$K$`-Vektorraums `$V$` mit Vektoraddition `$+:V\times V \to V$` und Skalarmultiplikation `$\cdot : K \times V \to V$` ist genau dann ein Untervektorraum, wenn folgende drei Bedingungen gelten:
+
+1. `$0_V \in \ker f$`.
+2. Für alle `$v, u \in \ker f$` gilt `$v + u \in \ker f$`.
+3. Für alle `$u \in \ker f$` und für alle `$\lambda \in K$` gilt `$\lambda \cdot u \in \ker f$`.
+
+Anders formuliert: Eine Teilmenge eines Vektorraums ist genau dann ein Untervektorraum, wenn sie sowohl das Nullelement enthält, als auch bezüglich der Vektoraddition und der skalaren Multiplikation abgeschlossen ist.
+
+## `$0_V \in \ker f$`
+Per definition ist ein Vektor `$v \in V$` genau dann ein Element von `$\ker f$`, wenn `$f(v) = 0$` gilt. Um die erste Eigenschaft zu zeigen, müssen wir also genau diese Bedingung zeigen. Das heißt, wir müssen zeigen, dass `$f(0_V) = 0_W$` ist. Das ist aber eine allgemeine Eigenschaft linearer Abbildungen.
+
+## Für alle `$v, u \in \ker f$` gilt `$v + u \in \ker f$`.
+
+Nun zeigen wir den dritten Punkt: Für alle `$v, u \in \ker f \subseteq V$` gilt
+`$$\begin{align}
+f(v + u) &=\ f(v) + f(u) \\[0.3em]
+& \ {\color{OliveGreen}\left\downarrow  f \text{ ist linear (insbesondere additiv)}\right.}\\[0.3em]
+&= \ 0_W + 0_W \\[0.3em]
+& \ {\color{OliveGreen} \left\downarrow v_1,v_2 \in \ker f\right.} \\[0.3em]
+&=\ 0_W
+\end{align}$$`
+Damit ist auch `$v + u$` im Kern von `$f$`.
+
+## Nächster Schritt
+Wir haben damit die ersten zwei Punkte gezeigt. Es bleiben noch der letzte Punkt:
+
+3. Für alle `$u \in \ker f$` und für alle `$\lambda \in K$` gilt `$\lambda \cdot u \in \ker f$`.
+
+Versuche nun den letzten Punkt zu beweisen.
+
+[[Kontrollieren|Skalarmultiplikation]]
+<script>renderLatex()</script>
+
+
+:: Annahme Behauptung Kontrolle {"position":"500,625","size":"100,100"}
+# Beweises üben: Untervektorraum
+Nimm dir Stift und Zettel. Wir wollen gemeinsam den folgenden Satz beweisen:
+
+## Satz
+Sei `$f\colon V \to W$` eine lineare Abbildung zwischen den `$K$`-Vektorräumen `$V$` und `$W$`. Dann ist der Kern `$\ker f$` von `$f$` ein Untervektorraum von `$V$`.
+
+## Mathematische Begriffe in dieser Aussage
+- (link:"lineare Abbildung")[(gotoURL:"https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks:_Lineare_Abbildungen,_Homomorphismus")]
+- `$K$`-Vektorraum
+- Kern einer linearen Abbildung
+(zukünftig Als Spoiler bzw. Einbindung externer Inhalte)
+
+## Trennen in Annahme und Behauptung
+(link:"Was ist eigentlich mit Annahme und Behauptung gemeint")[
+Jede mathematische Aussage lässt sich in Annahme und Behauptung trennen. Die Annahme ist alles, was wir gegeben haben. Im Deutschen ist sie meist im Konjunktiv 1 geschrieben. Die Behauptung ist die Schlussfolgerung, die wir aus den Annahmen ziehen. Sie wird häufig mit einem Dann eingeleitet.]
+
+### Annahme
+- `$V$` und `$W$` sind `$K$`-Vektorräume
+- `$f\colon V \to W$` ist eine lineare Abbildung 
+- `$\ker f = \{v \in V \mid f(v) = 0\}$`
+
+### Behauptung
+Die Menge `$\ker f$` ist ein Untervektorraum von `$V$`.
+
+## Nächster Schritt
+Wir wissen jetzt, was wir zeigen wollen. Wir wollen zeigen, dass etwas ein Untervektorraum ist. Schreibe nun eine Methode auf, mit der man zeigen kann, dass etwas ein Untervektorraum ist.
+
+[[Fertig|Beweismethoden]]
+<script>renderLatex()</script>
+
+
+:: Aufteilung Gegeben und Zu Zeigen {"position":"500,500","size":"100,100"}
+# Beweises üben: Untervektorraum
+Nimm dir Stift und Zettel. Wir wollen gemeinsam den folgenden Satz beweisen:
+
+## Satz
+Sei `$f\colon V \to W$` eine lineare Abbildung zwischen den `$K$`-Vektorräumen `$V$` und `$W$`. Dann ist der Kern `$\ker f$` von `$f$` ein Untervektorraum von `$V$`.
+
+## Mathematische Begriffe in dieser Aussage
+- (link:"lineare Abbildung")[(gotoURL:"https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks:_Lineare_Abbildungen,_Homomorphismus")]
+- `$K$`-Vektorraum
+- Kern einer linearen Abbildung
+(zukünftig Als Spoiler bzw. Einbindung externer Inhalte)
+
+## Nächster Schritt
+Wir kennen jetzt also die Begriffe, die in der Aussage vorkommen. Um die Aussage beweisen zu können, müssen wir herausfinden, was wir eigentlich zeigen müssen.
+
+(link:"Tipp")[
+Jede mathematische Aussage lässt sich in Annahme und Behauptung trennen. Die Annahme ist alles, was wir gegeben haben. Im Deutschen ist sie meist im Konjunktiv 1 geschrieben. Die Behauptung ist die Schlussfolgerung, die wir aus den Annahmen ziehen. Sie wird häufig mit einem Dann eingeleitet.]
+
+Trenne die Aussage des Satzes in Annahme und Behauptung. Du kannst dafür das folgende Schema auf deinen zettel kopieren
+
+### Annahme
+
+### Behauptung
+
+[[Kontrollieren|Annahme Behauptung Kontrolle]]
+<script>renderLatex()</script>
+
+
+:: Begriffe {"position":"500,375","size":"100,100"}
+# Beweises üben: Untervektorraum
+Nimm dir Stift und Zettel. Wir wollen gemeinsam den folgenden Satz beweisen:
+
+## Satz
+Sei `$f\colon V \to W$` eine lineare Abbildung zwischen den `$K$`-Vektorräumen `$V$` und `$W$`. Dann ist der Kern `$\ker f$` von `$f$` ein Untervektorraum von `$V$`.
+
+## Mathematische Begriffe in dieser Aussage
+- (link:"lineare Abbildung")[(gotoURL:"https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks:_Lineare_Abbildungen,_Homomorphismus")]
+- `$K$`-Vektorraum
+- Kern einer linearen Abbildung
+(zukünftig Als Spoiler bzw. Einbindung externer Inhalte)
+
+## Nächster Schritt
+Schreibe die Definitionen für die obigen Begriffe auf. Klicke auf die Begriffe, um zu überprüfen, ob du die Definition richtig im Kopf hast.
+
+[[Fertig|Aufteilung Gegeben und Zu Zeigen]]
+<script>renderLatex()</script>
+
+
+:: Beweismethoden {"position":"500,750","size":"100,100"}
+# Beweises üben: Untervektorraum
+Nimm dir Stift und Zettel. Wir wollen gemeinsam den folgenden Satz beweisen:
+
+## Satz
+Sei `$f\colon V \to W$` eine lineare Abbildung zwischen den `$K$`-Vektorräumen `$V$` und `$W$`. Dann ist der Kern `$\ker f$` von `$f$` ein Untervektorraum von `$V$`.
+
+## Mathematische Begriffe in dieser Aussage
+- (link:"lineare Abbildung")[(gotoURL:"https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks:_Lineare_Abbildungen,_Homomorphismus")]
+- `$K$`-Vektorraum
+- Kern einer linearen Abbildung
+(zukünftig Als Spoiler bzw. Einbindung externer Inhalte)
+
+## Trennen in Annahme und Behauptung
+(link:"Was ist eigentlich mit Annahme und Behauptung gemeint")[
+Jede mathematische Aussage lässt sich in Annahme und Behauptung trennen. Die Annahme ist alles, was wir gegeben haben. Im Deutschen ist sie meist im Konjunktiv 1 geschrieben. Die Behauptung ist die Schlussfolgerung, die wir aus den Annahmen ziehen. Sie wird häufig mit einem Dann eingeleitet.]
+
+### Annahme
+- `$V$` und `$W$` sind `$K$`-Vektorräume
+- `$f\colon V \to W$` ist eine lineare Abbildung 
+- `$\ker f = \{v \in V \mid f(v) = 0\}$`
+
+### Behauptung
+Die Menge `$\ker f$` ist ein Untervektorraum von `$V$`.
+
+## Beweismethoden
+Wir kennen zwei Wege, um zu beweisen, dass eine Teilmenge ein Untervektorraum ist.
+- [[Das Untervektorraumkriterium]]
+- [[Die Definition nachrechnen]]
+
+Wähle eine der beiden Methoden aus.
+<script>renderLatex()</script>
+
+
+:: Das Untervektorraumkriterium {"position":"500,875","size":"100,100"}
+# Beweises üben: Untervektorraum
+Nimm dir Stift und Zettel. Wir wollen gemeinsam den folgenden Satz beweisen:
+
+## Satz
+Sei `$f\colon V \to W$` eine lineare Abbildung zwischen den `$K$`-Vektorräumen `$V$` und `$W$`. Dann ist der Kern `$\ker f$` von `$f$` ein Untervektorraum von `$V$`.
+
+## Mathematische Begriffe in dieser Aussage
+- (link:"lineare Abbildung")[(gotoURL:"https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks:_Lineare_Abbildungen,_Homomorphismus")]
+- `$K$`-Vektorraum
+- Kern einer linearen Abbildung
+(zukünftig Als Spoiler bzw. Einbindung externer Inhalte)
+
+## Trennen in Annahme und Behauptung
+(link:"Was ist eigentlich mit Annahme und Behauptung gemeint")[
+Jede mathematische Aussage lässt sich in Annahme und Behauptung trennen. Die Annahme ist alles, was wir gegeben haben. Im Deutschen ist sie meist im Konjunktiv 1 geschrieben. Die Behauptung ist die Schlussfolgerung, die wir aus den Annahmen ziehen. Sie wird häufig mit einem Dann eingeleitet.]
+
+### Annahme
+- `$V$` und `$W$` sind `$K$`-Vektorräume
+- `$f\colon V \to W$` ist eine lineare Abbildung 
+- `$\ker f = \{v \in V \mid f(v) = 0\}$`
+
+### Behauptung
+Die Menge `$\ker f$` ist ein Untervektorraum von `$V$`.
+
+## Nächster Schritt
+Wir wollen das Untervektorraumkriterium verwenden. Schreibe es auf dienen Zettel.
+
+[[Fertig|Untervektorraumkriterium Aufgeschrieben]]
+<script>renderLatex()</script>
+
+
+:: Die Definition nachrechnen {"position":"625,875","size":"100,100"}
+Muss leider noch geschrieben werden. Bitte benutze erstmal den anderen Weg.
+
+
+:: Fertiger Beweis Untervektorraumkriterium {"position":"500,1625","size":"100,100"}
+# Beweises üben: Untervektorraum
+Hier ist eine Möglichkeit, um aus unseren Beweisnotizen einen vernünftig aufgeschriebenen Beweis zu bauen.
+
+## Satz
+Sei `$f\colon V \to W$` eine lineare Abbildung zwischen den `$K$`-Vektorräumen `$V$` und `$W$`. Dann ist der Kern `$\ker f$` von `$f$` ein Untervektorraum von `$V$`.
+
+## Beweis
+Wir wollen das Untervektorraumkriterium anwenden, das heißt, wir müssen die folgenden Dinge beweisen:
+
+1. `$0_V \in \ker f$`.
+2. Für alle `$v, u \in \ker f$` gilt `$v + u \in \ker f$`.
+3. Für alle `$u \in \ker f$` und für alle `$\lambda \in K$` gilt `$\lambda \cdot u \in \ker f$`.
+
+### Beweisschritt: `$0_V \in \ker f$`
+Per definition ist ein Vektor `$v \in V$` genau dann ein Element von `$\ker f$`, wenn `$f(v) = 0$` gilt. Um die erste Eigenschaft zu zeigen, müssen wir also genau diese Bedingung zeigen. Das heißt, wir müssen zeigen, dass `$f(0_V) = 0_W$` ist. Das ist aber eine allgemeine Eigenschaft linearer Abbildungen.
+
+### Beweisschritt: Für alle `$v, u \in \ker f$` gilt `$v + u \in \ker f$`.
+Nun zeigen wir den dritten Punkt: Für alle `$v, u \in \ker f \subseteq V$` gilt
+
+`$$\begin{align}
+f(v + u) &=\ f(v) + f(u) \\[0.3em]
+& \ {\color{OliveGreen}\left\downarrow  f \text{ ist linear (insbesondere additiv)}\right.}\\[0.3em]
+&= \ 0_W + 0_W \\[0.3em]
+& \ {\color{OliveGreen} \left\downarrow v_1,v_2 \in \ker f\right.} \\[0.3em]
+&=\ 0_W
+\end{align}$$`
+
+Damit ist auch `$v + u$` im Kern von `$f$`.
+
+### Beweisschritt:  Für alle `$u \in \ker f$` und für alle `$\lambda \in K$` gilt `$\lambda \cdot u \in \ker f$`.
+Der vierte Schritt funktioniert analog zum dritten Schritt: Für alle  `$u \in  \ker f$` und alle `$\lambda \in K$` gilt 
+
+`$$\begin{align}
+f(\lambda \cdot u) &= \lambda \cdot f(u) \\[0.3em]
+& \ { \color{OliveGreen}\left\downarrow  f \text{ ist linear (insbesondere homogen)}\right.}\\[0.3em]
+&=\ \lambda \cdot 0_W \\[0.3em]
+& \ { \color{OliveGreen} \left\downarrow v \in \ker f\right.} \\[0.3em]
+&=\ 0_W
+\end{align}$$`
+
+Das heißt, dass `$\lambda \cdot v \in \ker f$`.
+
+Damit haben wir alle Punkte vom Untervektorraumkriterium nachgeprüft und das heißt, dass `$\ker f$` ein Untervektorraum von `$V$` ist.
+<script>renderLatex()</script>
+
+
+:: Null enthalten {"position":"500,1250","size":"100,100"}
+# Beweises üben: Untervektorraum
+Nimm dir Stift und Zettel. Wir wollen gemeinsam den folgenden Satz beweisen:
+
+## Satz
+Sei `$f\colon V \to W$` eine lineare Abbildung zwischen den `$K$`-Vektorräumen `$V$` und `$W$`. Dann ist der Kern `$\ker f$` von `$f$` ein Untervektorraum von `$V$`.
+
+## Mathematische Begriffe in dieser Aussage
+- (link:"lineare Abbildung")[(gotoURL:"https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks:_Lineare_Abbildungen,_Homomorphismus")]
+- `$K$`-Vektorraum
+- Kern einer linearen Abbildung
+(zukünftig Als Spoiler bzw. Einbindung externer Inhalte)
+
+## Trennen in Annahme und Behauptung
+(link:"Was ist eigentlich mit Annahme und Behauptung gemeint")[
+Jede mathematische Aussage lässt sich in Annahme und Behauptung trennen. Die Annahme ist alles, was wir gegeben haben. Im Deutschen ist sie meist im Konjunktiv 1 geschrieben. Die Behauptung ist die Schlussfolgerung, die wir aus den Annahmen ziehen. Sie wird häufig mit einem Dann eingeleitet.]
+
+### Annahme
+- `$V$` und `$W$` sind `$K$`-Vektorräume
+- `$f\colon V \to W$` ist eine lineare Abbildung 
+- `$\ker f = \{v \in V \mid f(v) = 0\}$`
+
+### Behauptung
+Die Menge `$\ker f$` ist ein Untervektorraum von `$V$`.
+
+## Untervektorraumkriterium
+Eine Teilmenge `$\ker f$` eines `$K$`-Vektorraums `$V$` mit Vektoraddition `$+:V\times V \to V$` und Skalarmultiplikation `$\cdot : K \times V \to V$` ist genau dann ein Untervektorraum, wenn folgende drei Bedingungen gelten:
+
+1. `$0_V \in \ker f$`.
+2. Für alle `$v, u \in \ker f$` gilt `$v + u \in \ker f$`.
+3. Für alle `$u \in \ker f$` und für alle `$\lambda \in K$` gilt `$\lambda \cdot u \in \ker f$`.
+
+Anders formuliert: Eine Teilmenge eines Vektorraums ist genau dann ein Untervektorraum, wenn sie sowohl das Nullelement enthält, als auch bezüglich der Vektoraddition und der skalaren Multiplikation abgeschlossen ist.
+
+## `$0_V \in \ker f$`
+Per definition ist ein Vektor `$v \in V$` genau dann ein Element von `$\ker f$`, wenn `$f(v) = 0$` gilt. Um die erste Eigenschaft zu zeigen, müssen wir also genau diese Bedingung zeigen. Das heißt, wir müssen zeigen, dass `$f(0_V) = 0_W$` ist. Das ist aber eine allgemeine Eigenschaft linearer Abbildungen.
+
+## Nächster Schritt
+Wir haben damit den ersten Punkt gezeigt. Es bleiben noch die anderen zwei Punkte:
+
+2. Für alle `$v, u \in \ker f$` gilt `$v + u \in \ker f$`.
+3. Für alle `$u \in \ker f$` und für alle `$\lambda \in K$` gilt `$\lambda \cdot u \in \ker f$`.
+
+Versuche nun den zweiten Schritt zu beweisen.
+
+[[Kontrollieren|Addition]]
+<script>renderLatex()</script>
+
+
+:: Satz {"position":"500,250","size":"100,100"}
+# Beweises üben: Untervektorraum
+Nimm dir Stift und Zettel. Wir wollen gemeinsam den folgenden Satz beweisen:
+
+## Satz
+Sei `$f\colon V \to W$` eine lineare Abbildung zwischen den `$K$`-Vektorräumen `$V$` und `$W$`. Dann ist `$\ker f$` ein Untervektorraum von `$V$`.
+
+## Nächster Schritt
+Zuerst wollen wir dafür die Aussage verstehen. Schreibe alle mathematischen Begriffe aus der Aussage auf deinen Zettel.
+
+[[Fertig|Begriffe]]
+<script>renderLatex()</script>
+
+
+:: Skalarmultiplikation {"position":"500,1500","size":"100,100"}
+# Beweises üben: Untervektorraum
+Nimm dir Stift und Zettel. Wir wollen gemeinsam den folgenden Satz beweisen:
+
+## Satz
+Sei `$f\colon V \to W$` eine lineare Abbildung zwischen den `$K$`-Vektorräumen `$V$` und `$W$`. Dann ist der Kern `$\ker f$` von `$f$` ein Untervektorraum von `$V$`.
+
+## Mathematische Begriffe in dieser Aussage
+- (link:"lineare Abbildung")[(gotoURL:"https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks:_Lineare_Abbildungen,_Homomorphismus")]
+- `$K$`-Vektorraum
+- Kern einer linearen Abbildung
+(zukünftig Als Spoiler bzw. Einbindung externer Inhalte)
+
+## Trennen in Annahme und Behauptung
+(link:"Was ist eigentlich mit Annahme und Behauptung gemeint")[
+Jede mathematische Aussage lässt sich in Annahme und Behauptung trennen. Die Annahme ist alles, was wir gegeben haben. Im Deutschen ist sie meist im Konjunktiv 1 geschrieben. Die Behauptung ist die Schlussfolgerung, die wir aus den Annahmen ziehen. Sie wird häufig mit einem Dann eingeleitet.]
+
+### Annahme
+- `$V$` und `$W$` sind `$K$`-Vektorräume
+- `$f\colon V \to W$` ist eine lineare Abbildung 
+- `$\ker f = \{v \in V \mid f(v) = 0\}$`
+
+### Behauptung
+Die Menge `$\ker f$` ist ein Untervektorraum von `$V$`.
+
+## Untervektorraumkriterium
+Eine Teilmenge `$\ker f$` eines `$K$`-Vektorraums `$V$` mit Vektoraddition `$+:V\times V \to V$` und Skalarmultiplikation `$\cdot : K \times V \to V$` ist genau dann ein Untervektorraum, wenn folgende drei Bedingungen gelten:
+
+1. `$0_V \in \ker f$`.
+2. Für alle `$v, u \in \ker f$` gilt `$v + u \in \ker f$`.
+3. Für alle `$u \in \ker f$` und für alle `$\lambda \in K$` gilt `$\lambda \cdot u \in \ker f$`.
+
+Anders formuliert: Eine Teilmenge eines Vektorraums ist genau dann ein Untervektorraum, wenn sie sowohl das Nullelement enthält, als auch bezüglich der Vektoraddition und der skalaren Multiplikation abgeschlossen ist.
+
+## `$0_V \in \ker f$`
+Per definition ist ein Vektor `$v \in V$` genau dann ein Element von `$\ker f$`, wenn `$f(v) = 0$` gilt. Um die erste Eigenschaft zu zeigen, müssen wir also genau diese Bedingung zeigen. Das heißt, wir müssen zeigen, dass `$f(0_V) = 0_W$` ist. Das ist aber eine allgemeine Eigenschaft linearer Abbildungen.
+
+## Für alle `$v, u \in \ker f$` gilt `$v + u \in \ker f$`.
+Nun zeigen wir den dritten Punkt: Für alle `$v, u \in \ker f \subseteq V$` gilt
+
+`$$\begin{align}
+f(v + u) &=\ f(v) + f(u) \\[0.3em]
+& \ {\color{OliveGreen}\left\downarrow  f \text{ ist linear (insbesondere additiv)}\right.}\\[0.3em]
+&= \ 0_W + 0_W \\[0.3em]
+& \ {\color{OliveGreen} \left\downarrow v_1,v_2 \in \ker f\right.} \\[0.3em]
+&=\ 0_W
+\end{align}$$`
+
+Damit ist auch `$v + u$` im Kern von `$f$`.
+
+## Für alle `$u \in \ker f$` und für alle `$\lambda \in K$` gilt `$\lambda \cdot u \in \ker f$`.
+Der vierte Schritt funktioniert analog zum dritten Schritt: Für alle  `$u \in  \ker f$` und alle `$\lambda \in K$` gilt 
+
+`$$\begin{align}
+f(\lambda \cdot u) &= \lambda \cdot f(u) \\[0.3em]
+& \ { \color{OliveGreen}\left\downarrow  f \text{ ist linear (insbesondere homogen)}\right.}\\[0.3em]
+&=\ \lambda \cdot 0_W \\[0.3em]
+& \ { \color{OliveGreen} \left\downarrow v \in \ker f\right.} \\[0.3em]
+&=\ 0_W
+\end{align}$$`
+
+Das heißt, dass `$\lambda \cdot v \in \ker f$`.
+
+## Nächster Schritt
+Damit haben wir einen Beweis des Satzes gefunden. Herzlichen Glückwunsch!
+
+Wir müssen ihn jetzt nur noch so aufschrieben, dass ihn andere Mathematiker*innen gut verstehen können.
+
+(link:"Was heißt das eigentlitch?")[
+Beweise sind miest in der Form einer logischen Argumentation aufgebaut. Das heißt, man schreibt jeden Punkt so auf, dass andere ihn gut nachvollziehen können. Hierbeit geht es nicht darum, dass man nachvollziehen können muss, wie du auf den Beweis gekommen bist, sondern dass jeder Schritt in deiner Argumentation stimmt.
+
+In der Praxis heißt das vor allem, dass du die Notizen, die du bis jetzt hast noch ein wenig auftäumen und umstruktureiren musst.]
+
+Versuche deine Lösung in eine beweistypische Form zu bringen.
+
+[[Eine mögliche Lösung|Fertiger Beweis Untervektorraumkriterium]]
+<script>renderLatex()</script>
+
+
+:: Untervektorraumkriterium Angepasste Version {"position":"500,1125","size":"100,100"}
+# Beweises üben: Untervektorraum
+Nimm dir Stift und Zettel. Wir wollen gemeinsam den folgenden Satz beweisen:
+
+## Satz
+Sei `$f\colon V \to W$` eine lineare Abbildung zwischen den `$K$`-Vektorräumen `$V$` und `$W$`. Dann ist der Kern `$\ker f$` von `$f$` ein Untervektorraum von `$V$`.
+
+## Mathematische Begriffe in dieser Aussage
+- (link:"lineare Abbildung")[(gotoURL:"https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks:_Lineare_Abbildungen,_Homomorphismus")]
+- `$K$`-Vektorraum
+- Kern einer linearen Abbildung
+(zukünftig Als Spoiler bzw. Einbindung externer Inhalte)
+
+## Trennen in Annahme und Behauptung
+(link:"Was ist eigentlich mit Annahme und Behauptung gemeint")[
+Jede mathematische Aussage lässt sich in Annahme und Behauptung trennen. Die Annahme ist alles, was wir gegeben haben. Im Deutschen ist sie meist im Konjunktiv 1 geschrieben. Die Behauptung ist die Schlussfolgerung, die wir aus den Annahmen ziehen. Sie wird häufig mit einem Dann eingeleitet.]
+
+### Annahme
+- `$V$` und `$W$` sind `$K$`-Vektorräume
+- `$f\colon V \to W$` ist eine lineare Abbildung 
+- `$\ker f = \{v \in V \mid f(v) = 0\}$`
+
+### Behauptung
+Die Menge `$\ker f$` ist ein Untervektorraum von `$V$`.
+
+## Untervektorraumkriterium
+Eine Teilmenge `$\ker f$` eines `$K$`-Vektorraums `$V$` mit Vektoraddition `$+:V\times V \to V$` und Skalarmultiplikation `$\cdot : K \times V \to V$` ist genau dann ein Untervektorraum, wenn folgende drei Bedingungen gelten:
+
+1. `$0_V \in \ker f$`.
+2. Für alle `$v, u \in \ker f$` gilt `$v + u \in \ker f$`.
+3. Für alle `$u \in \ker f$` und für alle `$\lambda \in K$` gilt `$\lambda \cdot u \in \ker f$`.
+
+Anders formuliert: Eine Teilmenge eines Vektorraums ist genau dann ein Untervektorraum, wenn sie sowohl das Nullelement enthält, als auch bezüglich der Vektoraddition und der skalaren Multiplikation abgeschlossen ist.
+
+## Nächster Schritt
+Wir müssen also drei Dinge zeigen.
+
+1. `$0_V \in \ker f$`.
+2. Für alle `$v, u \in \ker f$` gilt `$v + u \in \ker f$`.
+3. Für alle `$u \in \ker f$` und für alle `$\lambda \in K$` gilt `$\lambda \cdot u \in \ker f$`.
+
+Was muss gelten, damit `$0_V \in \ker f$` gilt? Schribe es auf deinen Zettel.
+
+[[Kontrollieren|Null enthalten]]
+<script>renderLatex()</script>
+
+
+:: Untervektorraumkriterium Aufgeschrieben {"position":"500,1000","size":"100,100"}
+# Beweises üben: Untervektorraum
+Nimm dir Stift und Zettel. Wir wollen gemeinsam den folgenden Satz beweisen:
+
+## Satz
+Sei `$f\colon V \to W$` eine lineare Abbildung zwischen den `$K$`-Vektorräumen `$V$` und `$W$`. Dann ist der Kern `$\ker f$` von `$f$` ein Untervektorraum von `$V$`.
+
+## Mathematische Begriffe in dieser Aussage
+- (link:"lineare Abbildung")[(gotoURL:"https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks:_Lineare_Abbildungen,_Homomorphismus")]
+- `$K$`-Vektorraum
+- Kern einer linearen Abbildung
+(zukünftig Als Spoiler bzw. Einbindung externer Inhalte)
+
+## Trennen in Annahme und Behauptung
+(link:"Was ist eigentlich mit Annahme und Behauptung gemeint")[
+Jede mathematische Aussage lässt sich in Annahme und Behauptung trennen. Die Annahme ist alles, was wir gegeben haben. Im Deutschen ist sie meist im Konjunktiv 1 geschrieben. Die Behauptung ist die Schlussfolgerung, die wir aus den Annahmen ziehen. Sie wird häufig mit einem Dann eingeleitet.]
+
+### Annahme
+- `$V$` und `$W$` sind `$K$`-Vektorräume
+- `$f\colon V \to W$` ist eine lineare Abbildung 
+- `$\ker f = \{v \in V \mid f(v) = 0\}$`
+
+### Behauptung
+Die Menge `$\ker f$` ist ein Untervektorraum von `$V$`.
+
+## Untervektorraumkriterium
+Eine Teilmenge `$U$` eines `$K$`-Vektorraums `$V$` mit Vektoraddition `$+:V\times V \to V$` und Skalarmultiplikation `$\cdot : K \times V \to V$` ist genau dann ein Untervektorraum, wenn folgende drei Bedingungen gelten:
+
+1. `$0_V \in U$`.
+2. Für alle `$v, u \in U$` gilt `$v + u \in U$`.
+3. Für alle `$u \in U$` und für alle `$\lambda \in K$` gilt `$\lambda \cdot u \in U$`.
+
+Anders formuliert: Eine Teilmenge eines Vektorraums ist genau dann ein Untervektorraum, wenn sie sowohl das Nullelement enthält, als auch bezüglich der Vektoraddition und der skalaren Multiplikation abgeschlossen ist.
+
+## Nächster Schritt
+Wir wollen das Untervektorraumkriterium in unserer Situation anwenden. Passe hierzu das Untervektorraumkriterium so an, dass es die mathematischen Objekte und Notationen aus der Annahme verwendet.
+
+[[Fertig|Untervektorraumkriterium Angepasste Version]]
+<script>renderLatex()</script>
+
+
+:: StoryScript [script]
+window.renderLatex = function(){}
+
+$(function () {
+  const script1 = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js";
+  const script2 = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  $.getScript(script1, () => {
+    $.getScript(script2, () => {
+      window.renderLatex = function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+          ],
+          throwOnError : false
+        });
+      }
+      renderLatex();
+      $(window).on("sm.passage.shown", renderLatex);
+    });
+  });
+});
+
+:: StoryStylesheet [stylesheet]
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
