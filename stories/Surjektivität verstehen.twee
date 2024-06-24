@@ -1,0 +1,395 @@
+:: StoryTitle
+"Surjektiv" GV aus Def (Harlowe) echte Version
+
+
+:: StoryData
+{
+  "ifid": "ea3aedfe-d367-4792-8d7a-78e86567d829",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: \ Beispiele {"position":"800,600","size":"100,100"}
+### Beispiele von Funktionsgrapphen untersuchen
+
+Wir betrachten Beispiele von bekannten Funktionen mit ihren Graphen ob diese surjektiv sind oder nicht. Zuerst gehen wir ein Beispiel gemeinsam durch, dann kannst du weitere Beispiele Auswählen
+
+**Unser Beispiel:**
+Wir betrachten die lineare Funktion `$f\colon \R\to\R , \ x\mapsto 2x-4$`.
+
+Was sagt dein Bauchgefühl: Ist diese Funktion surjektiv?
+(dropdown:bind $bauch, "Auswählen", "Ja", "Nein")
+[[Weiter|Beispiele 2]]
+
+
+|L>[<script>renderLatex()</script>]
+
+
+:: \ Unsicher {"position":"500,600","size":"100,100"}
+### Du bist dir unsicher, was du machen sollst
+
+Es ist ganz normal, dass man anfangs nicht weiß, wie man eine Definition verstehen kann. 
+Ein paar Tipps, was du tun kannst: 
+* Prüfe, ob du alle Begriffe aus der Definition kennst. Manchmal musst du dafür andere Definitionen verstehen. Z.B. braucht die Definition von "surjektiv" auch die Definition von "Funktion".
+* Betrachte Beispiele und Gegenbeispiele
+* Versuche es Bildlich darzustellen
+* Stelle Thesen für die Definition auf und prüfe sie
+
+[[zurück zur Auswahl ->Auswahl]]
+
+
+:: Auswahl {"position":"700,400","size":"100,100"}
+## Auswahl
+
+**Definition** 
+
+`$$f\colon X\to Y \text{ ist surjektiv }\iff \forall y\in Y\exists x\in X\colon f(x)=y.$$` 
+
+
+Was möchtest du probieren, um die Definition besser zu verstehen?
+
+* [[Definition ausführlicher aufschreiben ->Definition ausführlich]]
+* [[Graphen von Funktionen untersuchen -> Beispiele]]<!--Graphen von Funktionen-->
+* [[Ich weiß nicht, was ich machen soll -> Unsicher]]
+|L>[<script>renderLatex()</script>]
+
+
+:: Beispiele 2 {"position":"800,800","size":"100,100"}
+###Funktion `$f$` auf Surjektivität untersuchen
+
+Wir zeichnen die Funktion auf `$f\colon \R\to\R\ 2x-4$` in ein Koordinatensystem.
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Graph_einer_lineare_Funktion_in_der_Ebene.svg">
+Wir wollen prüfen, ob unsere Funktion surjektiv ist, also ob sie folgende Eigenschaft erfüllt: 
+`$$\forall y\in Y\exists x\in X\colon f(x)=y.$$` 
+In unserem Beispiel ist der Definitions- und Zielbereich von `$f$`die Menge `$\R$`. Außerdem ist `$f(x)=2x-4$`. 
+
+Wir veranschaulichen uns die Bedingung für Surjektivität am Graphen von `$f$` 
+Die Aussage startet mit `$\forall y\in Y$`. Das bedeutet für jedes beliebige `$y\in Y$` soll der Rest der Aussage gelten. Ein solches `$y\in Y$` liegt auf der `$y$`-Achse. Wir zeichnen es ein: 
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Graph_einer_lineare_Funktion_in_der_Ebene_mit_einem_Punkt_auf_der_y-Achse.svg">
+Dafür soll nun gelten `$\exists x\in X\colon f(x)=y$`. Für den Graphen bedeutet das, der Graph von `$f$` hat für ein passendes `$x$` den Wert `$y$`. Der Graph soll also an irgendeinem Punkt, die Linie parallel zux `$x$`-Achse, die durch `$y$` geht, schneiden. 
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Lineare_Funktion_und_y-Linie.svg">
+Das `$x$` ist dann ein Punkt, bei dem der Graph von `$f$` die `$y$`-Linie trifft. 
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Lineare_Funktion_mit_zwei_Linien.svg">
+
+Damit eine Funktion surjektiv ist, muss das für jedes beliebige `$y$` gelten.  Wir haben es hier bildlich nur für `$y=2$` nachgewiesen. Um Surjektiv zu sein, muss der Graph der Funktion jede `$y$`-Linie für jedes `$y$` im Definitionsbereich schneiden. 
+
+Gilt das für `$f$`?
+(set:$quiz=0)
+(link-rerun:"ja")[(set:$quiz=1)(rerun:?Antwort1)(rerun:?L)]
+(link-rerun:"nein")[(set:$quiz=2)(rerun:?Antwort1)(rerun:?L)]
+Antwort: 
+|Antwort1>[(display:"Quiz Beispiele "+(text:$quiz))]
+
+Wir konnten also am Graphen untersuchen, ob die Funktion surjektiv ist.
+
+[[Weitere Beispiele betrachten|Beispiele 3]]
+
+
+|L>[<script>renderLatex()</script>]
+
+
+:: Beispiele 3 {"position":"800,1000","size":"100,100"}
+Wähle welche Funktion, du als nächstes überprüfen willst:
+
+* [[`$g\colon \R\to\R, \ x\mapsto x^3-1$`|Kubische Funktion]]
+* [[`$\sin\colon\R\to\R, \ x\mapsto \sin(x)$`|Sinus]]
+
+[[Zurück zur Auswahl->Auswahl]]
+|L>[<script>renderLatex()</script>]
+
+
+:: Definition {"position":"500,400","size":"100,100"}
+## Definition 
+Hier ist die Definition von Surjektiv aufgeschrieben:
+
+Eine Funktion `$f\colon X\to Y$` heißt surjektiv, wenn für alle `$y\in Y$` ein `$x\in X$` existiert mit `$f(x)=y$`. 
+
+Mit Quantoren geschrieben: 
+`$$f\colon X\to Y  \text{ ist surjektiv }  \iff \forall y\in Y\exists x\in X\colon f(x)=y.$$`
+
+Unser Ziel ist es, herauszufinden, was hinter der Definition steckt. Was bedeutet es, wenn eine Funktion surjektiv ist? Wie kann man sich das vorstellen?
+
+[[Weiter ->Auswahl]]
+|L>[<script>renderLatex()</script>]
+
+
+:: Definition - 0 {"position":"700,0","size":"100,100"}
+//Klicke auf eine der Zahlen, um eine Erklärung zu erhalten.//
+
+
+:: Definition - 1 {"position":"800,0","size":"100,100"}
+`$\forall$`
+
+"Für alle": Das bedeutet für alle der folgenden Variablen gilt etwas. 
+
+
+:: Definition - 2 {"position":"900,0","size":"100,100"}
+`$y\in Y$`
+
+y ist ein Element in der Menge Y. Die Menge Y ist die Zielmenge der Funktion `$f\colon X\to Y$`. Die Werte von f liegen also in dieser Menge.  
+
+
+:: Definition - 3 {"position":"1000,0","size":"100,100"}
+`$\exists$`
+
+"Es existiert": Das bedeutet, es existiert eine der folgenden Variablen. 
+
+
+:: Definition - 4 {"position":"1100,0","size":"100,100"}
+`$x\in X$`
+
+x ist ein Element in der Menge X. Die Menge X ist Definitionsbereich der Funktion `$f\colon X\to Y$`. In X liegen die Elemente, die man in f einsetzen kann.   
+
+
+:: Definition - 5 {"position":"1200,0","size":"100,100"}
+`$f(x)=y$`
+
+Das ist die Gleichung f(x)=y. Wenn man x in die Funktion f einsetzt, erhält man y. 
+
+
+:: Definition ausführlich {"position":"700,225","size":"100,100"}
+##Definition ausführlicher
+Wie können wir die Definition ausführlicher hinschreiben? 
+Wir wollen alle Begriffe, die in der Definition von Surjektivität vorkommen, genau verstehen. 
+(set:$def=0)(rerun:?Erklärung2)
+Klicke auf die Komponenten in der Definition, um Erklärungen zu ihnen zu bekommen:
+
+(link-rerun:"(1)")[(set:$def=1)(rerun:?Erklärung2)(rerun:?L)]`$\forall$`(link-rerun:"(2)")[(set:$def=2)(rerun:?Erklärung2)(rerun:?L)]`$ y\in Y$` (link-rerun:"(3)")[(set:$def=3)(rerun:?Erklärung2)(rerun:?L)]`$\exists$` (link-rerun:"(4)")[(set:$def=4)(rerun:?Erklärung2)(rerun:?L)]`$ x\in X$` `$\colon$`(link-rerun:"(5)")[(set:$def=5)(rerun:?Erklärung2)(rerun:?L)] `$f(x)=y$`
+(set:$definition="forall")
+''Erklärung: ''
+|Erklärung2>[(display:"Definition - "+(text:$def))]
+
+
+Kannst du nun die Definition in deinen eigenen Worten aufschreiben?
+(input-box:bind $LeserDef, "X",3)
+
+Gehe weiter, um zu sehen, wie man die Definition in Worten schreiben kann.
+[[Nächste Seite|Definition ausführlich 2]]
+|L>[<script>renderLatex()</script>]
+
+
+:: Definition ausführlich 2 {"position":"700,100","size":"100,100"}
+##Definition in Worten
+
+Eine Möglichkeit die Definition für Surjektivität in Worten aufzuschreiben, ist die folgende: 
+
+(box:"X")[Für jedes Element y aus der Wertemenge Y gibt es mindestens ein Element x aus der Definitionsmenge, das von f auf y abgebildet wird, f(x)=y.]
+
+Hier ist deine Definition zum Vergleichen: 
+(box:"X")[(print:$LeserDef)]
+
+Wenn deine Definition nicht genauso formuliert ist, ist sie nicht unbedingt falsch. Prüfe aber noch einmal, ob sie inhaltlich richtig ist. Hat sie "für alle/ für jedes" bzw. "es existiert / es gibt ein" an den richtigen Stellen? Sind die Variablen aus den richtigen Mengen? 
+
+Wenn du die Definition der Surjektivität weiter ergründen willst, gehe
+[[zurück zur Auswahl|Auswahl]]
+ |L>[<script>renderLatex()</script>]
+
+
+:: Kubisch 0 {"position":"500,1200","size":"100,100"}
+ //Klicke eine Antwort an.//
+
+
+:: Kubisch 1 {"position":"500,1300","size":"100,100"}
+Du meinst, der Graph schneidet jede `$y$`-Linie. 
+
+Um das genauer zu überprüfen, betrachten wir ein paar Beispiele für `$y$`. Finde mit Hilfe der Abbildung, bei welchen `$x$` der Graph von `$g$` die `$y$`-Liniefür die folgenden Werte von `$y$` schneidet: 
+1. `$y_1=0$` 
+2. `$y_2=-2$`
+3. `$y_3=3$`
+
+(set:$kub=0)
+(link-rerun:"weiter")[(set:$kub=1)(rerun:?Weiter)(rerun:?L)]
+
+|Weiter>[(display:"Kubisch 1"+(text:$kub))]
+
+
+
+:: Kubisch 10 {"position":"600,1200","size":"100,100"}
+
+
+
+:: Kubisch 11 {"position":"600,1300","size":"100,100"}
+Für alle drei Beispiele gibt es eine passende `$x$`-Stelle, wo der Graph die `$y$`-Linie schneidet. 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Kubische_Funktion_mit_waagrechten_Linien.svg">
+
+Tatsächlich trifft der Graph von `$g$` jede `$y$`-Linie. Damit ist `$g$` surjektiv!
+
+
+:: Kubisch 12 {"position":"600,1500","size":"100,100"}
+Tatsächlich schneidet der Graph auch diese `$y$`-Linie. Probiere es aus auf einem Blatt Papier oder über das Programm Geogebra. 
+
+Der Graph von `$g$` schneidet jede `$y$`-Linie und ist damit surjektiv. 
+
+
+:: Kubisch 2 {"position":"500,1400","size":"100,100"}
+Du meinst, dass `$g$` (text-style:"underline")[nicht] jede `$y$`-Linie schneidet. 
+Das bedeutet, es muss ein `$y$` geben, das vom Graphen von `$g$` nicht geschnitten wird. 
+
+Tippe deinen Wert für das `$y\in\R$`, das von `$g$` nicht getroffen wird, ein: 
+`$y=$`(input: "X=")
+
+Überlege dir, wie `$y$`-Linie für dieses `$y$` verläuft. Warum schneidet der Graph von `$g$` diese Linie nicht?
+
+(set:$kub=0)
+(link-rerun:"weiter")[(set:$kub=2)(rerun:?Kubisch)(rerun:?L)]
+
+|Kubisch>[(display:"Kubisch 1"+(text:$kub))]
+
+
+:: Kubische Funktion {"position":"800,1200","size":"100,100"}
+####Funktion `$g$` auf Surjektivität untersuchen
+
+Wir betrachten die Funktion
+`$$g\colon \R\to\R,\  x\mapsto x^3-1$$`
+Graph von `$g$`:
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Kubische_Funktion_Graph.svg">
+
+Wir haben schon gesehen, dass eine Funktion genau dann surjektiv ist, wenn ihr Graph jede `$y$`-Linie schneidet mit `$y$` aus dem Definitionsbereich. 
+
+Schneidet der Graph von `$g$` jede `$y$`-Linie? Was ist deine Antwort?
+(set:$kubisch=0)
+(link-rerun:"ja")[(set:$kubisch=1)(rerun:?Antwort2)(rerun:?L)]
+(link-rerun:"nein")[(set:$kubisch=2)(rerun:?Antwort2)(rerun:?L)]
+
+|Antwort2>[(display:"Kubisch "+(text:$kubisch))]
+
+
+[[Weitere Beispiele betrachten|Beispiele 3]]
+
+|L>[<script>renderLatex()</script>]
+
+
+:: Quiz Beispiele 0 {"position":"600,800","size":"100,100"}
+  //Klicke eine Antwort an//
+
+
+:: Quiz Beispiele 1 {"position":"600,900","size":"100,100"}
+Stimmt! Für jedes `$y\in \R$` schneidet der Graph von `$f$` die `$x$`-Linie!
+
+
+:: Quiz Beispiele 2 {"position":"600,1000","size":"100,100"}
+Das stimmt leider nicht. Schaue dir nochmal an, wie der Graph von `$f$` in diesem Beispiel aussieht.
+
+
+:: Sinus {"position":"950,1200","size":"100,100"}
+####Funktion `$\sin$` auf Surjektivität untersuchen
+
+Wir betrachten die Sinusfunktion
+`$$\sin\colon \R\to\R,\  x\mapsto \sin(x)$$`
+Graph von der Funktion:
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Graph_der_Sinusfunktion.svg">
+
+Wir haben schon gesehen, dass eine Funktion genau dann surjektiv ist, wenn ihr Graph jede `$y$`-Linie schneidet mit `$y$` aus dem Definitionsbereich. 
+
+Schneidet der Graph von `$\sin$` jede `$y$`-Linie? Was ist deine Antwort?
+(set:$sinus=0)
+(link-rerun:"ja")[(set:$sinus=1)(rerun:?Sinus1)(rerun:?L)]
+(link-rerun:"nein")[(set:$sinus=2)(rerun:?Sinus1)(rerun:?L)]
+
+|Sinus1>[(display:"Sinus "+(text:$sinus))]
+
+
+[[Weitere Beispiele betrachten|Beispiele 3]]
+
+|L>[<script>renderLatex()</script>]
+
+
+:: Sinus 0 {"position":"1100,1200","size":"100,100"}
+ //Klicke eine Antwort an.//
+
+
+:: Sinus 1 {"position":"1100,1300","size":"100,100"}
+Du meinst, der Graph schneidet jede `$y$`-Linie. 
+
+Um das genauer zu überprüfen, betrachten wir ein paar Beispiele für `$y$`. Finde mit Hilfe der Abbildung, bei welchen `$x$` der Graph von `$g$` die `$y$`-Liniefür die folgenden Werte von `$y$` schneidet: 
+1. `$y_1=0$` 
+2. `$y_2=-2$`
+3. `$y_3=3$`
+
+(set:$sin=0)
+(link-rerun:"weiter")[(set:$sin=1)(rerun:?Weiter2)(rerun:?L)]
+
+|Weiter2>[(display:"Sinus 1"+(text:$sin))]
+
+
+
+:: Sinus 10 {"position":"1200,1200","size":"100,100"}
+
+
+
+:: Sinus 11 {"position":"1200,1300","size":"100,100"}
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Sinus_mit_drei_Linien.svg">
+
+Der Graph von `$\sin$` schneidet ''nicht'' die `$y_2$`-Linie oder die `$y_3$`-Linie. Deshalb ist `$\sin\colon\R\to\R$` nicht surjektiv. 
+
+
+:: Sinus 12 {"position":"1200,1500","size":"100,100"}
+Es stimmt, dass der Graph nicht jedes `$y\in\R$` erreicht. Zum Beispiel schneidet der Graph nicht die `$y$`-Linie für `$y=2$`. 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Sinus_mit_y.svg">
+
+Also ist `$\sin\colon\R\to\R$` nicht surjektiv. 
+
+
+:: Sinus 2 {"position":"1100,1400","size":"100,100"}
+Du meinst, dass `$g$` (text-style:"underline")[nicht] jede `$y$`-Linie schneidet. 
+Das bedeutet, es muss ein `$y$` geben, das vom Graphen von `$g$` nicht geschnitten wird. 
+
+Tippe deinen Wert für das `$y\in\R$`, das von `$g$` nicht getroffen wird, ein: 
+`$y=$`(input: bind $deiny, "X=")
+
+(set:$sin=0)
+(link-rerun:"weiter")[(set:$sin=2)(rerun:?Weiter3)(rerun:?L)]
+
+|Weiter3>[(display:"Sinus 1"+(text:$sin))]
+
+
+:: Start {"position":"300,400","size":"100,100"}
+## Was ist eine "surjektive" Funktion? 
+
+Wir wollen verstehen, was es heißt "surjektiv" zu sein. Du hast in der Vorlesung wahrscheinlich eine Definition von "surjektiv" gesehen. Suche diese raus und lies sie dir durch. 
+
+[[Fertig->Definition]]
+|L>[<script>renderLatex()</script>]
+
+
+:: Todos {"position":"125,225","size":"100,100"}
+* bei der Auswahl eine weitere Option "Ich habe nun eine Vorstellung"; dann diese Vorstellung prüfen lassen
+
+
+:: Variablen {"position":"250,225","size":"100,100"}
+(set:$imagepath="C:\Users\Anne Reif\Documents\Serlo Hochschulmathe\Prototypen\Surjektiv\Graphen")
+
+
+:: StoryScript [script]
+window.renderLatex = function(){}
+$(function () {
+  const script1 = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js";
+  const script2 = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  $.getScript(script1, () => {
+    $.getScript(script2, () => {
+      window.renderLatex = function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+          ],
+          throwOnError : false
+        });
+      }
+      renderLatex();
+      $(window).on("sm.passage.shown", renderLatex);
+    });
+  });
+});
+
+:: StoryStylesheet [stylesheet]
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
+
+a {
+ color: #4169E1; 
+}
