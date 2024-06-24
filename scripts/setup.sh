@@ -12,5 +12,14 @@ if [ -z "$ZIP_FILE" ] || [ -z "$TARGET_PATH" ]; then
   exit 1
 fi
 
+HARLOWE_URL="https://raw.githubusercontent.com/klembot/twinejs/develop/public/story-formats"
+HARLOWE_VERSION="harlowe-3.3.9"
+STORY_DIR="$TARGET_PATH/storyformats"
+
 unzip "$ZIP_FILE" -d "$TARGET_PATH"
 chmod +x "$TARGET_PATH/tweego"
+
+mkdir -p "$STORY_DIR/$HARLOWE_VERSION"
+
+wget -O "$STORY_DIR/$HARLOWE_VERSION/format.js" "$HARLOWE_URL/$HARLOWE_VERSION/format.js"
+wget -O "$STORY_DIR/$HARLOWE_VERSION/icon.svg" "$HARLOWE_URL/$HARLOWE_VERSION/icon.svg"
