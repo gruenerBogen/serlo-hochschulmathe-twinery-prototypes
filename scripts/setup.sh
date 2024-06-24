@@ -12,7 +12,7 @@ if [ -z "$ZIP_FILE" ] || [ -z "$TARGET_PATH" ]; then
   exit 1
 fi
 
-HARLOWE_URL="https://raw.githubusercontent.com/klembot/twinejs/develop/public/story-formats"
+HARLOWE_URL="https://raw.githubusercontent.com/klembot/twinejs/60c3cadc308ec9ceafb0406c5c1ef58eaa828d2e/public/story-formats/"
 HARLOWE_VERSION="harlowe-3.3.9"
 STORY_DIR="$TARGET_PATH/storyformats"
 
